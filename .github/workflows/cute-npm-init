@@ -1,0 +1,20 @@
+name: cute-npm-init
+on:
+  workflow_dispatch:
+  
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install -g cute-npm-init
+      - run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Bot commit" -a || echo "No changes to commit"
+          git pull --rebase
+          git push
