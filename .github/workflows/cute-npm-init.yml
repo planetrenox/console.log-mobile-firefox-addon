@@ -11,6 +11,7 @@ jobs:
         with:
           node-version: 20
       - run: npm install -g cute-npm-init
+      - run: cute-npm-init
       - run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
