@@ -1,0 +1,30 @@
+{
+  "name": "console.log-mobile-firefox-addon",
+  "version": "0.1.0",
+  "description": "Experimental.",
+  "main": "./dist/uniport.js",
+  "bin": {
+    "console.log-mobile-firefox-addon": "src/cli.js"
+  },
+  "scripts": {
+    "build": "uniport",
+    "cli": "node ./src/cli.js",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "",
+  "repository": "git+https://github.com//console.log-mobile-firefox-addon.git",
+  "funding": "",
+  "keywords": [
+    "front-end",
+    "cli",
+    "frameworks"
+  ],
+  "files": [
+    "src, dist"
+  ],
+  "devDependencies": {
+    "uniport": "latest"
+  }
+}
